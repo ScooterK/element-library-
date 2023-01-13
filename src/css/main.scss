@@ -33,24 +33,19 @@ body{
     align-items: center;
 
 #main-container{
-    @include size(auto, 25%); 
     background-color: $main-container;
-    
     padding: 10px; 
     border-radius: 10px;
     @include box-shadow(2px, 2px, 10px, 0);
-
+    transition: width .25s ease-in-out;
 #logo-container{
-    @include size(40%, 40%);
+    @include size(150px, 150px);
     display: block; 
     margin: 20px auto; 
-    transition: all .25s ease-in-out;
+   
 }
- 
-.shrinky-dink{
-    @include size(20% r!important, 20% !important);
 
-}
+
 #button-container{
         display: flex;
         justify-content: center;
@@ -79,5 +74,15 @@ body{
         }
 
 }//button-container
+
+&:hover{width: 70%}
+    }//main-container
+
+    .shrinky-dink{
+        @include size(auto, 25%); 
+    }
+    .enhance{
+        @include size(auto, 50%);
+    
     }
 }
